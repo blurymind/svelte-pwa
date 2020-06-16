@@ -1,15 +1,11 @@
 <script>
-  import HelloWorld from './components/HelloWorld.svelte';
-  import Router from './components/Router.svelte';
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js");
+  }
 
-  if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js');
-    }
+  const foo = ["bar", 1, "test"];
 </script>
 
-<style lang="postcss"></style>
-
-<main class="overflow-hidden">
-  <Router/>
-  <HelloWorld/>
+<main>
+  {#each foo as f}{f}{/each}
 </main>
