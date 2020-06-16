@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser'
 
 import builtins from 'rollup-plugin-node-builtins'
 import globals from 'rollup-plugin-node-globals'
-import copy from 'rollup-plugin-copy-assets'
+// import copy from 'rollup-plugin-copy-assets'
 
 const production = !process.env.ROLLUP_WATCH
 export default {
@@ -29,9 +29,9 @@ export default {
     commonjs(),
     globals(),
     builtins(),
-    copy({
-      assets: ['src/assets'],
-    }),
+    // copy({
+    //   assets: ['src/assets'],
+    // }),
 
     !production && livereload('public'),
 
