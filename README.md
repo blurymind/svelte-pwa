@@ -1,4 +1,4 @@
-![icon](https://github.com/OliwerDrywa/svelte-pwa-template/blob/master/src/assets/favicon-32x32.png)
+![icon](https://github.com/OliwerDrywa/svelte-pwa-template/blob/master/public/assets/favicon-32x32.png)
 Svelte PWA starter
 =============
 
