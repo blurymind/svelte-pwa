@@ -15,14 +15,14 @@ export default {
     format: 'iife',
     sourcemap: true,
     name: 'app',
-    file: 'dist/main.js',
+    file: 'public/build/bundle.js',
   },
 
   plugins: [
     svelte({
       dev: !production,
       css: (css) => {
-        css.write('dist/components.css')
+        css.write('public/build/bundle.css')
       },
     }),
     resolve(),
@@ -32,7 +32,9 @@ export default {
     copy({
       assets: ['src/assets'],
     }),
-    !production && livereload('dist'),
+
+    !production && livereload('public'),
+
     production && terser(),
   ],
 }

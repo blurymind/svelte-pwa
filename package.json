@@ -1,32 +1,14 @@
 {
-  "name": "svelte-starter-postcss",
+  "name": "svelte-pwa-template",
   "version": "1.0.0",
-  "description": "A starter for bulding Svelte web apps, with PostCSS support.",
-  "main": " ",
+  "description": "A PWA starter template for Svelte",
   "scripts": {
     "build": "rollup -c",
     "build:auto": "rollup -c -w",
-    "serve": "sirv dist",
-    "serve:dev": "sirv dist --dev",
-    "dev": "run-p build:auto serve:dev",
-    "now-build": "rollup -c",
-    "test": "cypress open"
+    "serve": "sirv public",
+    "serve:dev": "sirv public --dev",
+    "dev": "run-p build:auto serve:dev"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/noprodev/svelte-starter-postcss.git"
-  },
-  "keywords": [
-    "Svelte",
-    "starter",
-    "PostCSS"
-  ],
-  "author": "noprodev",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/noprodev/svelte-starter-postcss/issues"
-  },
-  "homepage": "https://github.com/noprodev/svelte-starter-postcss#readme",
   "devDependencies": {
     "chokidar": "^3.0.0",
     "cypress": "^3.4.1",
