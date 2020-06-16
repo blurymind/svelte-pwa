@@ -1,5 +1,5 @@
 <script>
-  const name = "PWA";
+  const name = "pwa";
 </script>
 
 <style>
@@ -23,6 +23,6 @@
 </style>
 
 <main>
-  <h1>Hello {name}!</h1>
+  <h1>hello {name}!</h1>
   <img src="/assets/android-chrome-192x192.png" alt="svelte_icon" />
 </main>

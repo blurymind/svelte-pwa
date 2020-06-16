@@ -1,7 +1,7 @@
 {
   "name": "svelte-pwa-template",
   "version": "1.0.0",
-  "description": "A PWA starter template for Svelte",
+  "description": "a pwa starter template for svelte",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
