@@ -22,6 +22,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>svelte pwa template</title>
+</svelte:head>
+
 <main>
   <h1>hello {name}!</h1>
   <img src="/assets/android-chrome-192x192.png" alt="svelte_icon" />

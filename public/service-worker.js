@@ -1,4 +1,51 @@
-console.log("TODO - learn service workers")
+const staticCache = 'static-v0.0'
+const dynamicCache = 'dynamic-v0.0'
+const assets = [
+  '/',
+  '/index.html',
+  '/global.css',
+  '/build/bundle.css',
+  '/build/bundle.js',
+  'https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap',
+]
+
+const precache = async () => {
+  const cache = await caches.open(staticCache)
+  cache.addAll(assets)
+}
+
+// install
+self.addEventListener('install', (e) => e.waitUntil(precache()))
+
+const invalidateOldCache = async () => {
+  const keys = await caches.keys()
+  const isOldCache = (key) => key !== staticCache && key !== dynamicCache
+  const oldKeys = keys.filter(isOldCache)
+  return Promise.all(oldKeys.map((key) => caches.delete(key)))
+}
+
+self.addEventListener('activate', (e) => e.waitUntil(invalidateOldCache()))
+
+const fetchCache = async (request) => {
+  const cacheResponse = await caches.match(request)
+  return (
+    cacheResponse ||
+    fetch(request).then(async (fetchRes) => {
+      const cache = await caches.open(dynamicCache)
+      cache.put(request.url, fetchRes.clone())
+
+      return fetchRes
+    })
+  )
+}
+
+const serveFallback = () => {
+  //   caches.match('/fallback.html')
+}
+
+self.addEventListener('fetch', (e) => {
+  e.respondWith(fetchCache(e.request).catch(serveFallback))
+})
 
 // var cacheName = "sgtoilet-cache-" + Date.now();
 // var filesToCache = [
