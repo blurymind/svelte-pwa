@@ -1,5 +1,5 @@
-![icon](https://github.com/OliwerDrywa/svelte-pwa-template/blob/master/public/assets/favicon-32x32.png)
-svelte pwa starter
+![icon](https://github.com/OliwerDrywa/svelte-pwa/blob/master/public/assets/favicon-32x32.png)
+svelte pwa starter template
 =============
 
 includes elements from [cerivitos/svelte-pwa-now](https://github.com/cerivitos/svelte-pwa-now)
@@ -11,7 +11,7 @@ includes elements from [cerivitos/svelte-pwa-now](https://github.com/cerivitos/s
 1 - clone or degit the repo
 
 ```bash
-npx degit OliwerDrywa/svelte-pwa-template
+npx degit OliwerDrywa/svelte-pwa
 ```
 
 2 - install dependencies
