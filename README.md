@@ -1,5 +1,5 @@
 ![icon](https://github.com/OliwerDrywa/svelte-pwa/blob/master/public/assets/favicon-32x32.png)
-svelte pwa starter tempalte - sveltefire
+svelte pwa starter template - sveltefire
 =============
 
 includes elements from [cerivitos/svelte-pwa-now](https://github.com/cerivitos/svelte-pwa-now)
@@ -28,7 +28,7 @@ npm install
 npm run dev
 ```
 
-4 - go to [localhost:3000](http://localhost:3000).
+4 - go to [localhost:3000](http://localhost:3000)
 
 #### for production
 
