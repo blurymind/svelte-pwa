@@ -1,5 +1,5 @@
-![icon](https://github.com/OliwerDrywa/svelte-pwa-template/blob/master/public/assets/favicon-32x32.png)
-svelte pwa starter - sveltefire
+![icon](https://github.com/OliwerDrywa/svelte-pwa/blob/master/public/assets/favicon-32x32.png)
+svelte pwa starter template - sveltefire
 =============
 
 includes elements from [cerivitos/svelte-pwa-now](https://github.com/cerivitos/svelte-pwa-now)
@@ -13,7 +13,7 @@ includes [codediodeio/sveltefire](https://github.com/codediodeio/sveltefire) and
 1 - clone or degit the repo
 
 ```bash
-npx degit OliwerDrywa/svelte-pwa-template#sveltefire
+npx degit OliwerDrywa/svelte-pwa#sveltefire
 ```
 
 2 - install dependencies
@@ -28,7 +28,7 @@ npm install
 npm run dev
 ```
 
-4 - go to [localhost:3000](http://localhost:3000).
+4 - go to [localhost:3000](http://localhost:3000)
 
 #### for production
 

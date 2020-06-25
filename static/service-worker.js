@@ -1,13 +1,12 @@
+import { registerRoute } from 'workbox-routing'
+import { StaleWhileRevalidate } from 'workbox-strategies'
+
 const cacheName = 'stale-with-revalidate'
 
-// import workbox
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js')
-const { routing, strategies } = workbox
-
 // implements staleWhileRevalidate to all routes
-routing.registerRoute(
+registerRoute(
   (e) => e.request.url.indexOf('firestore.googleapis.com') === -1,
-  new strategies.StaleWhileRevalidate({ cacheName }),
+  new StaleWhileRevalidate({ cacheName }),
 )
 
 // removes all caches not named <cacheName>
