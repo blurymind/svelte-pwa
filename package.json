@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Todor Imreorov",
   "description": "a pwa starter template for svelte",
-  "main": "main.js",
+  "main": "electron.js",
   "build": {
     "appId": "example.app"
   },
@@ -12,7 +12,7 @@
     "dev": "rollup -c -w",
     "start": "sirv public",
     "deploy": "yarn run build && gh-pages -d public",
-    "electron": "NODE_ENV=development electron main.js",
+    "electron": "NODE_ENV=development electron electron.js",
     "build-linux": "electron-builder --linux --config electron-builder-config.json --publish never"
   },
   "devDependencies": {
