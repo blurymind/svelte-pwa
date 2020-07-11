@@ -2,7 +2,9 @@ import svelte from 'rollup-plugin-svelte'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
+import url from '@rollup/plugin-url';
 import { terser } from 'rollup-plugin-terser'
+import { injectManifest } from 'rollup-plugin-workbox';
 
 const production = !process.env.ROLLUP_WATCH
 
@@ -24,7 +26,45 @@ export default {
         css.write('public/build/bundle.css')
       },
     }),
-
+    injectManifest({
+      swDest: 'public/service-worker.js',
+      globDirectory: 'public',
+      swSrc : 'src/sw-src.js',
+    }),
+    
+    url({
+      // Where to put files
+      destDir: 'public',
+      // Path to put infront of files (in code)
+      publicPath: process.env.NODE_ENV === "development"
+              ? 'http://localhost:5000/assets/'
+              : './assets/',
+      // File name once copied
+      fileName: '[name][extname]',
+      // Kinds of files to process
+      include: [
+              '**/*.svg',
+              '**/*.png',
+              '**/*.gif',
+              '**/*.jpg',
+              '**/*.jpeg',
+      ]
+    }),
+    url({
+      // Where to put files
+      destDir: 'public',
+      // Path to put infront of files (in code)
+      publicPath: process.env.NODE_ENV === "development"
+              ? 'http://localhost:5000/'
+              : '/',
+      // File name once copied
+      fileName: '[name][extname]',
+      // Kinds of files to process
+      include: [
+              '*.js',
+              '*.json',
+      ]
+    }),
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
     // some cases you'll need additional configuration -
@@ -34,8 +74,8 @@ export default {
       browser: true,
       dedupe: ['svelte'],
     }),
-    commonjs(),
 
+    commonjs(),
     // In dev mode, call `npm run start` once
     // the bundle has been generated
     !production && serve(),

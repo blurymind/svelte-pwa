@@ -22,4 +22,4 @@ const invalidateOldCache = async () => {
 
 // runs invalidateOldCache on activation
 self.addEventListener('activate', (e) => e.waitUntil(invalidateOldCache()))
-precaching.precacheAndRoute([{"revision":"816d7badea7192bd75aa5239f8219212","url":"build/bundle.css"},{"revision":"25908976ac5fe73bc4a72532b74e216b","url":"build/bundle.js"},{"revision":"3b8d31e2dc3f8d2f71ab725efcca7c9f","url":"global.css"},{"revision":"992e6c258efde68eff7fb5e09f3ccbb6","url":"index.html"}]);
+precaching.precacheAndRoute(self.__WB_MANIFEST);
