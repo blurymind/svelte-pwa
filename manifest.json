@@ -4,7 +4,7 @@
   "theme_color": "#5bd1d7",
   "background_color": "#f6f5f5",
   "display": "standalone",
-  // "start_url": "/svelte-pwa/",
+  "start_url": "/svelte-pwa/",
   "icons": [
     {
       "src": "assets/android-chrome-192x192.png",
