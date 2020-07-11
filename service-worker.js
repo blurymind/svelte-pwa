@@ -1,6 +1,6 @@
-import { precacheAndRoute } from 'workbox-precaching';
-import { NetworkFirst } from 'workbox-strategies';
-import { registerRoute } from 'workbox-routing';
+const {precacheAndRoute} = require('workbox-precaching');
+const { NetworkFirst } = require('workbox-strategies');
+const { registerRoute } = require('workbox-routing');
 
 console.log('Yarn\'s service worker is caching files');
 registerRoute(/https:\/\/yarnspinnertool\.github\.io\/YarnEditor\//, new NetworkFirst());
