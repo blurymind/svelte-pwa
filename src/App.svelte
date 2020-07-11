@@ -27,7 +27,7 @@
 </svelte:head>
 
 <main>
-  <h1>hello {name}! 434</h1>
+  <h1>hello {name}! I also work in electron now</h1>
   <img src="assets/android-chrome-192x192.png" alt="svelte_icon" />
   <div class="title" id="addPwa">🍰Add to Homescreen📲</div>
 </main>
