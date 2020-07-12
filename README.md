@@ -1,8 +1,10 @@
 ![icon](https://github.com/OliwerDrywa/svelte-pwa/blob/master/public/assets/favicon-32x32.png)
 svelte pwa starter template
+
+checkout the gh-pages demo
+[DEMO]( https://blurymind.github.io/svelte-pwa-electron/)
 =============
 
-includes elements from [cerivitos/svelte-pwa-now](https://github.com/cerivitos/svelte-pwa-now)
 
 ## getting started
 
@@ -26,7 +28,7 @@ npm install
 npm run dev
 ```
 
-4 - go to [localhost:3000](http://localhost:3000)
+4 - go to [localhost:5000](http://localhost:5000)
 
 #### for production
 
@@ -48,10 +50,6 @@ tip: use [Real Favicon Generator](https://realfavicongenerator.net/) which autom
 #### index.html metadata
 
 the icons are all utilized in the `<meta></meta>` tags for Facebook, Twitter and Google indexing among others. be sure to customize your app title and descriptions in all the tags.
-
-#### service worker
-
-registers a workbox-based service worker located at `public/service-worker.js`. this service worker implements workbox's StaleWhileRevalidate for all routes.
 
 #### manifest
 
